@@ -1,0 +1,26 @@
+<h1>Personal BBP</h1>
+
+<p>Listado de los empledos de bbp</p>
+
+<p *ngIf="!personal"><em>Loading...</em></p>
+
+<table class='table' *ngIf="personal">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido Paterno</th>
+      <th>Apellido Materno</th>
+      <th>Sexo</th>
+      <th>Puesto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let forecast of personal">
+      <td>{{ forecast.nombre }}</td>
+      <td>{{ forecast.app }}</td>
+      <td>{{ forecast.apm }}</td>
+      <td>{{ forecast.sexo }}</td>
+      <td>{{ forecast.puesto }}</td>
+    </tr>
+  </tbody>
+</table>
